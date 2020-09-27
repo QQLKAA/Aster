@@ -5,3 +5,4 @@ TODO:
   - Spritesheet
   - Logs
   - Fix: "GL_INVALID_OPERATION error generated. No active program."
+  - README
