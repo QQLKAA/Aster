@@ -14,7 +14,10 @@ Shader::Shader(const std::vector<std::string> shaders)
 	{
 		std::ifstream file(path);
 		if (file.fail())
+		{
 			std::cout << "Cant open file " << path << "\n";
+			return;
+		}
 
 		std::string strShaderType;
 		getline(file, strShaderType); // get first line in file

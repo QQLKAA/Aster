@@ -55,7 +55,7 @@ Renderer::Renderer()
 	buffer = nullptr;
 	indices = 0;
 
-	const std::vector<std::string> shaders = {
+	const std::vector<std::string> shaders = { //TODO: Allow users to define their own shaders
 		"Assets/Vertex.glsl",
 		"Assets/Fragment.glsl"
 	};

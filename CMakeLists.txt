@@ -1,4 +1,4 @@
-﻿cmake_minimum_required(VERSION 3.17.2) # my visual studio cmake version (you can change it)
+﻿cmake_minimum_required(VERSION 3.17.2)
 
 project(Aster)
 
@@ -20,9 +20,7 @@ add_subdirectory("Libraries/glad")
 
 add_compile_definitions(GLFW_INCLUDE_NONE)
 
-aux_source_directory("Source" SOURCES)
-add_library(Aster ${SOURCES})
-target_include_directories(Aster PUBLIC "Source")
+add_subdirectory("Source")
 
 target_link_libraries(Aster glfw)
 target_link_libraries(Aster glm)
