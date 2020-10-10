@@ -43,8 +43,8 @@ Shader::Shader(const std::vector<std::string> shaders)
 		{
 			int len;
 			glGetShaderiv(id, GL_INFO_LOG_LENGTH, &len);
-			char* message = (char*)_malloca(len * sizeof(char));
-			glGetShaderInfoLog(id, len, &len, message);
+			std::string message(len, '\0');
+			glGetShaderInfoLog(id, len, &len, &message[0]);
 			glDeleteShader(id);
 			std::cout << message << "\n";
 			return;
